@@ -1,0 +1,17 @@
+{
+  "extends": "../tsconfig.json", // プロジェクトのルートにある tsconfig.json を継承
+  "compilerOptions": {
+    "outDir": "./.tests", // E2E テスト用の出力ディレクトリ
+    "rootDir": "./",    // E2E テストのルートディレクトリ
+    "module": "commonjs", // Jest では CommonJS を使用
+    "types": ["jest", "node"] // Jest と Node.js の型サポート
+  },
+  "include": [
+    "**/*.ts",          // このディレクトリ配下のすべての .ts ファイルを含む
+    "../src/**/*.ts"    // 必要に応じてアプリケーションのソースも含める
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

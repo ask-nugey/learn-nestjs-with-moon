@@ -1,0 +1,32 @@
+{
+	"extends": "@packages/ts-config/tsconfig.base.json",
+	"compilerOptions": {
+		"resolveJsonModule": true,
+		"removeComments": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports": true,
+		"sourceMap": true,
+		"outDir": "../../.moon/cache/types/apps/api",
+		"baseUrl": ".",
+		"strictNullChecks": true,
+		"noImplicitAny": false,
+		"strictBindCallApply": false,
+		"forceConsistentCasingInFileNames": false,
+		"noFallthroughCasesInSwitch": false,
+		"paths": {
+			"@/*": [
+				"./src/*"
+			]
+		}
+	},
+	"include": [
+		"src/**/*.ts",
+		"test/**/*.ts",
+		"**/*spec.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
+}
